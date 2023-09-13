@@ -1,4 +1,3 @@
-import { enqueueSnackbar } from 'notistack';
 import { useEffect, useState } from 'react';
 
 import type { BeforeInstallPromptEvent } from '@/types/common/service';
@@ -32,11 +31,7 @@ const useA2HS = (): A2HSReturn => {
 
   const installApp = (): void => {
     deferredPrompt?.prompt();
-    deferredPrompt?.userChoice.then((choiceResult) => {
-      // eslint-disable-next-line no-console
-      enqueueSnackbar(`install ${choiceResult.outcome}`, {
-        variant: 'success',
-      });
+    deferredPrompt?.userChoice.then(() => {
       clearPrompt();
     });
   };

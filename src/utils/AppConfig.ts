@@ -9,9 +9,9 @@ type AppConfigType = {
 };
 
 export const AppConfig: AppConfigType = {
-  site_name: 'sample',
-  title: 'sample',
-  description: 'sample',
+  site_name: 'nextjs-boilerplate',
+  title: 'nextjs-boilerplate',
+  description: 'nextjs-boilerplate',
   locale: 'ko',
   base_url: process.env.NODE_ENV === 'production' ? '/api/v1' : '/api/mock',
 };
